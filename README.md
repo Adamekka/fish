@@ -2,13 +2,13 @@
 
 My fish config
 
-## Set up
+## Install
+
+NOTE: Your old fish config will be placed in `~/.config/fish_bak/`
 
 ```bash
-git clone https://github.com/Adamekka/fish # Clone this repo
-cd fish # Go to the fish/ folder
-sudo make install # Run sudo make install to overwrite your fish config
-cd .. && rm -rf fish # (optional) Remove the fish folder, that you cloned to your home folder
+cp -r ~/.config/fish/ ~/.config/fish_bak/ # Make a backup of your old config
+git clone https://github.com/Adamekka/fish ~/.config/fish # Clone this repo to fish config folder
 ```
 
 ## Examples
