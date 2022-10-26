@@ -13,4 +13,4 @@ cd .. && rm -rf fish # (optional) Remove the fish folder, that you cloned to you
 
 ## Examples
 
-![fish-example]()
+![fish-example](./images/fish-example.png)
