@@ -11,3 +11,7 @@ alias j="z"
 
 # l as ls
 alias l="ls"
+
+# Human readable flags
+alias df="df -h"
+alias free="free -h"
