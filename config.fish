@@ -26,6 +26,6 @@ end
 
 # Import previous_command
 # Needed for !! and !$
-if test -e ~/.config/fish/functions/!!.fish
-    source ~/.config/fish/functions/!!.fish
+if test -e ~/.config/fish/functions/previous_command.fish
+    source ~/.config/fish/functions/previous_command.fish
 end
