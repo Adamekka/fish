@@ -15,3 +15,6 @@ alias l="ls"
 # Human readable flags
 alias df="df -h"
 alias free="free -h"
+
+# Rickroll
+alias rickroll="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
