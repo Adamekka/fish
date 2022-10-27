@@ -1,5 +1,7 @@
-# Interactive removing files
-alias rm="rm -i"
+# Confirm before overwriting files
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
 
 # Better finging files
 alias f="find . | grep "
