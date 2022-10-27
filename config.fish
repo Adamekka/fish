@@ -23,3 +23,9 @@ end
 if test -e ~/.config/fish/functions/autojump.fish
     source ~/.config/fish/functions/autojump.fish
 end
+
+# Import previous_command
+# Needed for !! and !$
+if test -e ~/.config/fish/functions/!!.fish
+    source ~/.config/fish/functions/!!.fish
+end
