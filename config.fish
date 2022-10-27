@@ -14,6 +14,11 @@ set -x GIT_EDITOR $EDITOR
 # Prevent directories names from being shortened
 set fish_prompt_pwd_dir_length 0
 
+# Import aliases
+for i in (ls ~/.config/fish/aliases/)
+    source ~/.config/fish/aliases/$i
+end
+
 # Autojump
 function addzhist --on-variable PWD
     z --add "$PWD"
