@@ -15,7 +15,7 @@ git clone https://github.com/Adamekka/fish ~/.config/fish # Clone this repo to f
 
 ```bash
 cd ~/.config/fish # Go to fish config folder
-git fetch # Fetch changes form GitHub
+git fetch # Fetch changes from GitHub
 git pull # Pull changes from GitHub
 ```
 
