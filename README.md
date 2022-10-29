@@ -17,6 +17,8 @@ git clone https://github.com/Adamekka/fish ~/.config/fish # Clone this repo to f
 fish_update
 ```
 
+If this doesn't work, do it the old way:
+
 ![fish-update](./images/fish-update.png)
 
 ## Examples
