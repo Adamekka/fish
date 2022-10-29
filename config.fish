@@ -29,3 +29,8 @@ end
 if test -e ~/.config/fish/functions/previous_command.fish
     source ~/.config/fish/functions/previous_command.fish
 end
+
+# Import Updating
+if test -e ~/.config/fish/functions/fish_update.fish
+    source ~/.config/fish/functions/fish_update.fish
+end
