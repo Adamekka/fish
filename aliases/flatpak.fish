@@ -1,2 +1,4 @@
 # Stuff that's installed from Flatpak
-alias eclipse="flatpak run org.eclipse.Java"
+if test -d /var/lib/flatpak/app/org.eclipse.Java
+    alias eclipse="flatpak run org.eclipse.Java"
+end
