@@ -14,8 +14,7 @@ git clone https://github.com/Adamekka/fish ~/.config/fish # Clone this repo to f
 ## Update
 
 ```bash
-cd ~/.config/fish # Go to fish config folder
-git pull # Pull changes from GitHub
+fish_update
 ```
 
 ![fish-update](./images/fish-update.png)
