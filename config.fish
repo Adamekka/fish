@@ -8,7 +8,14 @@ set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
 # Editor
-set -x EDITOR nvim
+if test -e /usr/bin/nvim
+    set -x EDITOR nvim
+else if test -e /usr/bin/vim
+    set -x EDITOR vim
+else if test -e /usr/bin/vi
+    set -x EDITOR vi
+end
+
 set -x GIT_EDITOR $EDITOR
 
 # Prevent directories names from being shortened
