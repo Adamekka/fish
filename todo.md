@@ -2,7 +2,7 @@
 
 Implement this stuff:
 
-- [ ] exa
+- [x] exa
 - [ ] bat
 - [ ] rd
 - [ ] ripgrep
