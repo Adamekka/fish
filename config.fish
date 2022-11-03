@@ -8,11 +8,11 @@ set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
 # Editor
-if test -e /usr/bin/nvim
+if type -q nvim
     set -x EDITOR nvim
-else if test -e /usr/bin/vim
+else if type -q vim
     set -x EDITOR vim
-else if test -e /usr/bin/vi
+else if type -q vi
     set -x EDITOR vi
 end
 
