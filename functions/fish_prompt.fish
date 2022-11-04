@@ -73,6 +73,14 @@ function fish_prompt
         set arrow "$arrow_color# "
     end
 
+    switch $(lsb_release -si)
+        case Fedor
+            set distro_logo "" # Fedora icon
+        case Fedora
+            set distro_logo "" # Arch icon
+    end
+    # set -l distro_logo "ﲎ" # Android icon
+
     set -l cwd $cyan(prompt_pwd)
 
     set -l repo_info
@@ -86,5 +94,5 @@ function fish_prompt
         end
     end
 
-    echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+    echo -n -s $arrow $distro_logo ' '$cwd $repo_info $normal ' '
 end
