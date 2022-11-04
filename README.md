@@ -1,6 +1,14 @@
 # fish
 
-My fish config
+The sexiest Fish config
+
+## Features
+
+- [x] A lot of handy aliases
+- [x] Autojump
+- [x] <a style="color:red">C</a><a style="color:orange">o</a><a style="color:yellow">l</a><a style="color:green">o</a><a style="color:teal">r</a><a style="color:blue">f</a><a style="color:purple">u</a><a style="color:violet">l</a>
+- [x] Sexy looking ls
+- [x] Sexy looking prompt
 
 ## Install
 
@@ -24,3 +32,5 @@ If this doesn't work, do it the old way:
 ## Examples
 
 ![fish-example](./images/fish-example.png)
+
+![fish-example](./images/fish-example2.png)
