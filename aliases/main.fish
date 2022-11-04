@@ -15,3 +15,6 @@ alias free="free -h"
 
 # Rickroll
 alias rickroll="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
+
+# Better showing contents of a file
+alias cat="bat"

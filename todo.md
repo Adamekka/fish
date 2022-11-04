@@ -3,6 +3,6 @@
 Implement this stuff:
 
 - [x] exa
-- [ ] bat
+- [x] bat
 - [ ] rd
 - [ ] ripgrep
