@@ -73,11 +73,13 @@ function fish_prompt
         set arrow "$arrow_color# "
     end
 
-    switch $(lsb_release -si)
-        case Fedora
-            set distro_logo "" # Fedora icon
-        case Arch
-            set distro_logo "" # Arch icon
+    if type -q lsb_release # This checking is needed or Termux will go crazy
+        switch $(lsb_release -si)
+            case Fedora
+                set distro_logo "" # Fedora icon
+            case Arch
+                set distro_logo "" # Arch icon
+        end
     end
 
     # Termux workaround
