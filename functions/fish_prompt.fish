@@ -74,12 +74,14 @@ function fish_prompt
     end
 
     switch $(lsb_release -si)
-        case Fedor
-            set distro_logo "" # Fedora icon
         case Fedora
+            set distro_logo "" # Fedora icon
+        case Arch
             set distro_logo "" # Arch icon
     end
     # set -l distro_logo "ﲎ" # Android icon
+    # if [ -d /system/app ] && [ -d /system/priv-app ]; then
+    # end
 
     set -l cwd $cyan(prompt_pwd)
 
