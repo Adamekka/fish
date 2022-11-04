@@ -84,7 +84,7 @@ function fish_prompt
 
     # Termux workaround
     if test -d /system/app && test -d /system/priv-app
-        set -l distro_logo "ﲎ" # Android icon
+        set distro_logo "ﲎ" # Android icon
     end
 
     set -l cwd $cyan(prompt_pwd)
