@@ -79,9 +79,11 @@ function fish_prompt
         case Arch
             set distro_logo "" # Arch icon
     end
-    # set -l distro_logo "ﲎ" # Android icon
-    # if [ -d /system/app ] && [ -d /system/priv-app ]; then
-    # end
+
+    # Termux workaround
+    if [ -d /system/app ] && [ -d /system/priv-app ]; then
+        set -l distro_logo "ﲎ" # Android icon
+    end
 
     set -l cwd $cyan(prompt_pwd)
 
