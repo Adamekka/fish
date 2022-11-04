@@ -3,7 +3,7 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-# Better finging files
+# Better finding files
 alias f="find . | grep "
 
 # Set Autojump to j
