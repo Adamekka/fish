@@ -83,7 +83,7 @@ function fish_prompt
     end
 
     # Termux workaround
-    if [ -d /system/app ] && [ -d /system/priv-app ]
+    if test -d /system/app && test -d /system/priv-app
         set -l distro_logo "ﲎ" # Android icon
     end
 
