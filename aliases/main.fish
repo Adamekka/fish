@@ -18,3 +18,6 @@ alias rickroll="curl -s -L https://raw.githubusercontent.com/keroserene/rickroll
 
 # Better showing contents of a file
 alias cat="bat"
+
+# Simpler quitting shell
+alias q="exit"
