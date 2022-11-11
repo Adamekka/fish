@@ -4,5 +4,5 @@ Implement this stuff:
 
 - [x] exa
 - [x] bat
-- [ ] rd
+- [ ] fd
 - [ ] ripgrep
