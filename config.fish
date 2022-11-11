@@ -41,3 +41,8 @@ end
 if test -e $__fish_config_dir/functions/fish_update.fish
     source $__fish_config_dir/functions/fish_update.fish
 end
+
+# Import private stuff (scripts for this machine only in ./functions/private.fish)
+if test -e $__fish_config_dir/functions/private.fish
+    source $__fish_config_dir/functions/private.fish
+end
