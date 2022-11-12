@@ -25,3 +25,6 @@ alias q="exit"
 
 # show IP
 alias myip="curl ipinfo.io/ip"
+
+# Simpler clear
+alias cl="clear"
