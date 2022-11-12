@@ -31,3 +31,6 @@ alias myip="curl ipinfo.io/ip"
 
 # Simpler clear
 alias cl="clear"
+
+# Killall
+alias ka="killall"
