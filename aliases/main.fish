@@ -22,3 +22,6 @@ alias cat="bat"
 
 # Simpler quitting shell
 alias q="exit"
+
+# show IP
+alias myip="curl ipinfo.io/ip"
