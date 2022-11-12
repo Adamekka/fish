@@ -11,6 +11,7 @@ alias j="z"
 
 # Human readable flags
 alias df="df -h"
+alias du="du -h"
 alias free="free -h"
 
 # Rickroll
