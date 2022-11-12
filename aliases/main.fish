@@ -1,7 +1,7 @@
-# Confirm before overwriting files
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+# Confirm before overwriting files and make it verbose
+alias cp="cp -iv"
+alias mv='mv -iv'
+alias rm='rm -iv'
 
 # Better finding files
 alias f="find . | rg"
