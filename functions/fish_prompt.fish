@@ -74,7 +74,7 @@ function fish_prompt
     end
 
     if type -q lsb_release # This checking is needed or Termux will go crazy
-        switch $(lsb_release -si)
+        switch (lsb_release -si)
             case Fedora
                 set distro_logo "" # Fedora icon
             case Arch
