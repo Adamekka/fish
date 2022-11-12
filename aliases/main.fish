@@ -4,7 +4,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Better finding files
-alias f="find . | grep "
+alias f="find . | rg"
 
 # Set Autojump to j
 alias j="z"
