@@ -1,3 +1,6 @@
+# Set distro global variable
+set -x DISTRO (lsb_release -si)
+
 # pnpm
 set -gx PNPM_HOME "/home/adamekka/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
