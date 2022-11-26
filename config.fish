@@ -40,3 +40,5 @@ end
 if test -e $__fish_config_dir/functions/private.fish
     source $__fish_config_dir/functions/private.fish
 end
+
+starship init fish | source
