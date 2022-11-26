@@ -22,7 +22,7 @@ set -x GIT_EDITOR $EDITOR
 # Prevent directories names from being shortened
 set fish_prompt_pwd_dir_length 0
 
-# Import aliases
+# Source aliases
 for i in (ls $__fish_config_dir/aliases/)
     source $__fish_config_dir/aliases/$i
 end
@@ -32,18 +32,18 @@ for i in (exa $__fish_config_dir/abbrs/)
     source $__fish_config_dir/abbrs/$i
 end
 
-# Import previous_command
+# Source previous_command
 # Needed for !! and !$
 if test -e $__fish_config_dir/functions/previous_command.fish
     source $__fish_config_dir/functions/previous_command.fish
 end
 
-# Import Updating
+# Source fish_update
 if test -e $__fish_config_dir/functions/fish_update.fish
     source $__fish_config_dir/functions/fish_update.fish
 end
 
-# Import private stuff (scripts for this machine only in ./functions/private.fish)
+# Source private stuff (scripts for this machine only in ./functions/private.fish)
 if test -e $__fish_config_dir/functions/private.fish
     source $__fish_config_dir/functions/private.fish
 end
