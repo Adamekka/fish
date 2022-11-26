@@ -28,3 +28,6 @@ format = "[$hostname]($style)\n"
 trim_at = "-"
 style = "bold dimmed blue"
 disabled = false
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
