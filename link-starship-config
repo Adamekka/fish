@@ -1,0 +1,6 @@
+#!/bin/sh
+
+printf "This script will remove old starship config and link a new one\n"
+
+rm -iv ~/.config/starship.toml
+ln -v ~/.config/fish/starship.toml ~/.config/starship.toml
