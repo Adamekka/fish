@@ -14,6 +14,7 @@ error_symbol = "[➜](bold red)"
 disabled = true
 
 [directory]
+read_only = " "
 truncation_length = 5
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
