@@ -2,7 +2,7 @@
 .vscode/
 
 # Private or local config
-private.*
+private*
 
 # Fish generated files
 fishd*
