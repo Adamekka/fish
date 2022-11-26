@@ -1,2 +1,9 @@
+# VS Code stuff
 .vscode/
+
+# Private or local config
 private.*
+
+# Fish generated files
+fishd*
+fish_variables
