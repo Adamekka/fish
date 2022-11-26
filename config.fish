@@ -25,11 +25,6 @@ for i in (ls $__fish_config_dir/aliases/)
     source $__fish_config_dir/aliases/$i
 end
 
-# Import Autojump
-if test -e $__fish_config_dir/functions/autojump.fish
-    source $__fish_config_dir/functions/autojump.fish
-end
-
 # Import previous_command
 # Needed for !! and !$
 if test -e $__fish_config_dir/functions/previous_command.fish
