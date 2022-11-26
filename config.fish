@@ -1,5 +1,7 @@
 # Set distro global variable
-set -x DISTRO (lsb_release -si)
+if type -q lsb_release # This checking is needed or Termux will go crazy
+    set -x DISTRO (lsb_release -si)
+end
 
 # pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
