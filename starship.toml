@@ -19,7 +19,8 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [username]
 style_user = "bold dimmed blue"
-show_always = false
+format = "[$user]($style) in "
+show_always = true
 
 [hostname]
 ssh_only = false
