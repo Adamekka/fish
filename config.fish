@@ -27,6 +27,11 @@ for i in (ls $__fish_config_dir/aliases/)
     source $__fish_config_dir/aliases/$i
 end
 
+# Source abbreviations
+for i in (exa $__fish_config_dir/abbrs/)
+    source $__fish_config_dir/abbrs/$i
+end
+
 # Import previous_command
 # Needed for !! and !$
 if test -e $__fish_config_dir/functions/previous_command.fish
