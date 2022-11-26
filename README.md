@@ -25,11 +25,11 @@ git clone https://github.com/Adamekka/fish ~/.config/fish # Clone this repo to f
 fish_update
 ```
 
-If this doesn't work, do it the old way:
-
-![fish-update](./images/fish-update.png)
+This will pull changes from GitHub
 
 ## Examples
+
+Screenshots are taken in Alacritty using Dracula theme
 
 ![fish-example](./images/fish-example.png)
 
