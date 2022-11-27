@@ -22,7 +22,7 @@ show_always = true
 [hostname]
 ssh_only = false
 format = "[$hostname]($style)\n"
-trim_at = "-"
+# trim_at = "-"
 style = "bold dimmed blue"
 disabled = false
 
