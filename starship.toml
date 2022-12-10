@@ -46,8 +46,8 @@ symbol = " "
 [elm]
 symbol = " "
 
-[git_branch]
-symbol = " "
+# [git_branch]
+# symbol = " "
 
 [golang]
 symbol = " "
