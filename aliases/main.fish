@@ -21,7 +21,7 @@ alias free="free -h"
 alias rickroll="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 
 # Better showing contents of a file
-if test $DISTRO = "Debian"
+if test $DISTRO = Debian
     alias cat="batcat"
 else
     alias cat="bat"
