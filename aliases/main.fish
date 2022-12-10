@@ -3,7 +3,7 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
 
-# Mkdir will create parent dirs and it verbose
+# Mkdir will create parent dirs and will be verbose
 alias mkdir="mkdir -pv"
 
 # Better finding files
