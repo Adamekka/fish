@@ -40,4 +40,4 @@ alias cl="clear"
 alias ka="killall"
 
 # Du sorted
-alias dusort="du -s * | sort -h"
+alias dusort="du -sc * | sort -h"
