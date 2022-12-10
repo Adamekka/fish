@@ -1,1 +1,5 @@
-abbr -a s "sudo"
+# Sudo
+abbr -a s sudo
+
+# Killall
+abbr -a ka killall

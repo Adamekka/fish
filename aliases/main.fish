@@ -36,8 +36,6 @@ alias myip="curl ipinfo.io/ip"
 # Simpler clear
 alias cl="clear"
 
-# Killall
-alias ka="killall"
 
 # Du sorted
 alias dusort="du -sc * | sort -h"
