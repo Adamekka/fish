@@ -1,6 +1,8 @@
 # Set distro global variable
 if type -q lsb_release # This checking is needed or Termux will go crazy
     set -x DISTRO (lsb_release -si)
+else
+    set -x DISTRO unknown
 end
 
 # pnpm
