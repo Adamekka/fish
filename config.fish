@@ -1,6 +1,8 @@
 # Set distro global variable
 if type -q lsb_release # This checking is needed or Termux will go crazy
     set -x DISTRO (lsb_release -si)
+else
+    set -x DISTRO "unknown"
 end
 
 # pnpm
@@ -15,6 +17,8 @@ else if type -q vim
     set -x EDITOR vim
 else if type -q vi
     set -x EDITOR vi
+else if type -q helix
+    set -x EDITOR helix
 end
 
 set -x GIT_EDITOR $EDITOR
