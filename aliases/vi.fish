@@ -1,4 +1,7 @@
-# Vi stuff
+############
+# Vi stuff #
+############
+
 alias v="$EDITOR"
 alias vi="$EDITOR"
 alias vim="$EDITOR"
@@ -12,3 +15,10 @@ if type -q sudoedit
     alias svim="sudoedit"
     alias snvim="sudoedit"
 end
+
+#################
+# Other editors #
+#################
+
+# Helix
+alias h="helix"
