@@ -52,4 +52,9 @@ function update
     if type -q snap
         sudo snap refresh
     end
+
+    # Fish
+    if type -q fisher
+        fisher update
+    end
 end
