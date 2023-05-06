@@ -55,4 +55,7 @@ end
 # Rust wrapper
 set -x RUSTC_WRAPPER sccache
 
+# For Gradle
+set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
+
 starship init fish | source
