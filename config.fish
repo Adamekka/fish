@@ -58,4 +58,7 @@ set -x RUSTC_WRAPPER sccache
 # For Gradle
 set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
 
+# For SDKMAN
+bass source ~/.sdkman/bin/sdkman-init.sh
+
 starship init fish | source
