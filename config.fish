@@ -53,6 +53,6 @@ if test -e $__fish_config_dir/functions/private.fish
 end
 
 # Rust wrapper
-set -x RUSTC_WRAPPER "sccache"
+set -x RUSTC_WRAPPER sccache
 
 starship init fish | source
