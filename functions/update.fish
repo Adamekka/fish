@@ -74,4 +74,9 @@ function update
         pip install --upgrade pip
         pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
     end
+
+    # Node.js packages
+    if type -q npm
+        npm update -g
+    end
 end
