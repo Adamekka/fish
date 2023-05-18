@@ -43,6 +43,17 @@ function update
         rustup update
     end
 
+    # Rust programs
+    if type -q cargo
+        if type -q cargo-update
+            cargo install-update -a
+        else
+            echo "Cargo is installed, but cargo-update is not."
+            echo "Run 'cargo install cargo-update' to install it."
+            echo "Unable to update Rust programs."
+        end
+    end
+
     # Flatpak
     if type -q flatpak
         flatpak update
