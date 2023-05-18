@@ -68,4 +68,10 @@ function update
     if type -q fisher
         fisher update
     end
+
+    # Python packages
+    if type -q pip
+        pip install --upgrade pip
+        pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
+    end
 end
