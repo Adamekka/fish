@@ -79,4 +79,9 @@ function update
     if type -q npm
         npm update -g
     end
+
+    # Yarn packages
+    if type -q yarn
+        yarn global upgrade
+    end
 end
