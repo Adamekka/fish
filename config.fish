@@ -61,4 +61,9 @@ set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
 # For SDKMAN
 bass source ~/.sdkman/bin/sdkman-init.sh
 
+# Godot
+if type -q godot
+    alias godot4="godot"
+end
+
 starship init fish | source
