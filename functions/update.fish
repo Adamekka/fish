@@ -45,7 +45,7 @@ function update
 
     # Rust programs
     if type -q cargo
-        if type -q cargo-update
+        if type -q cargo-install-update
             cargo install-update -a
         else
             echo "Cargo is installed, but cargo-update is not."
