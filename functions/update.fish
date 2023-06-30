@@ -84,4 +84,9 @@ function update
     if type -q yarn
         yarn global upgrade
     end
+
+    # Ruby gems
+    if type -q gem
+        gem update
+    end
 end
