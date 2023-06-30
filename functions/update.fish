@@ -1,11 +1,13 @@
 function update
     # Debian/Ubuntu
-    if type -q nala
-        sudo nala update
-        sudo nala upgrade
-    else if type -q apt
-        sudo apt update
-        sudo apt upgrade
+    if test (uname) != "Darwin"
+        if type -q nala
+            sudo nala update
+            sudo nala upgrade
+        else if type -q apt
+            sudo apt update
+            sudo apt upgrade
+        end
     end
 
     # Arch
