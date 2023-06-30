@@ -59,7 +59,9 @@ set -x RUSTC_WRAPPER sccache
 set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
 
 # For SDKMAN
-bass source ~/.sdkman/bin/sdkman-init.sh
+if test -e ~/.sdkman/bin/sdkman-init.sh
+    bass source ~/.sdkman/bin/sdkman-init.sh
+end
 
 # Godot
 if type -q godot
