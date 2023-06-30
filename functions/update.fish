@@ -64,7 +64,12 @@ function update
         sudo snap refresh
     end
 
-    # Fish
+    # Fish config
+    if grep -q "url = https://github.com/Adamekka/fish.git" $fish_config/.git/config
+        fish_update
+    end
+
+    # Fisher
     if type -q fisher
         fisher update
     end
