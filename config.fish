@@ -68,4 +68,7 @@ if type -q godot
     alias godot4="godot"
 end
 
+# Set theme
+fish_config theme choose "Dracula Official"
+
 starship init fish | source
