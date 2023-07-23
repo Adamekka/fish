@@ -58,7 +58,9 @@ function update
 
     # Flatpak
     if type -q flatpak
-        flatpak update
+        sudo flatpak update -y
+        sudo flatpak remove --unused -y
+        sudo flatpak repair
     end
 
     # Snap
