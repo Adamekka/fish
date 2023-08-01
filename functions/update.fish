@@ -1,6 +1,6 @@
 function update
     # Debian/Ubuntu
-    if test (uname) != "Darwin"
+    if test (uname) != Darwin
         if type -q nala
             sudo nala update
             sudo nala upgrade
