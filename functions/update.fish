@@ -1,4 +1,20 @@
 function update
+    # NixOS
+    if test -f /etc/NIXOS
+        sudo nix-channel --update
+        sudo nixos-rebuild switch
+
+        # Fish config
+        fish_update
+
+        # Fisher
+        if type -q fisher
+            fisher update
+        end
+
+        return
+    end
+
     # Debian/Ubuntu
     if test (uname) != Darwin
         if type -q nala
