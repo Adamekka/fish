@@ -10,6 +10,9 @@ function update
         # Fisher
         if type -q fisher
             fisher update
+            cd $fish_config
+            git status -s
+            cd -
         end
 
         return
@@ -84,16 +87,6 @@ function update
         sudo snap refresh
     end
 
-    # Fish config
-    if grep -q "url = https://github.com/Adamekka/fish.git" $fish_config/.git/config
-        fish_update
-    end
-
-    # Fisher
-    if type -q fisher
-        fisher update
-    end
-
     # Python packages
     if type -q pip
         pip install --upgrade pip
@@ -116,5 +109,18 @@ function update
     # Ruby gems
     if type -q gem
         gem update
+    end
+
+    # Fish config
+    if grep -q "url = https://github.com/Adamekka/fish.git" $fish_config/.git/config
+        fish_update
+    end
+
+    # Fisher
+    if type -q fisher
+        fisher update
+        cd $fish_config
+        git status -s
+        cd -
     end
 end
