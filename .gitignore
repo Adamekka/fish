@@ -7,3 +7,5 @@ private*
 # Fish generated files
 fishd*
 fish_variables
+
+dman.fish
