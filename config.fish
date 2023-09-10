@@ -32,7 +32,7 @@ for i in (ls $__fish_config_dir/aliases/)
 end
 
 # Source abbreviations
-for i in (exa $__fish_config_dir/abbrs/)
+for i in (eza $__fish_config_dir/abbrs/)
     source $__fish_config_dir/abbrs/$i
 end
 
