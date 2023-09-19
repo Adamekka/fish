@@ -11,3 +11,6 @@ abbr -a ka killall
 
 # swiftformat
 abbr -a sf "swiftformat **/*.swift"
+
+# virt-manager
+abbr -a vm "virt-manager -c qemu:///session --no-fork"
