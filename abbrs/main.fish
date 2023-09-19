@@ -9,5 +9,5 @@ end
 # Killall
 abbr -a ka killall
 
-# swift-format
-abbr -a sf "swift-format -i **/*.swift"
+# swiftformat
+abbr -a sf "swiftformat **/*.swift"
