@@ -27,13 +27,13 @@ set -x GIT_EDITOR $EDITOR
 set fish_prompt_pwd_dir_length 0
 
 # Source aliases
-for i in (ls $__fish_config_dir/aliases/)
-    source $__fish_config_dir/aliases/$i
+for i in $__fish_config_dir/aliases/*.fish
+    source $i
 end
 
 # Source abbreviations
-for i in (eza $__fish_config_dir/abbrs/)
-    source $__fish_config_dir/abbrs/$i
+for i in $__fish_config_dir/abbrs/*.fish
+    source $i
 end
 
 # Source previous_command
