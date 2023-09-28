@@ -24,7 +24,7 @@ if not status is-interactive
     exit
 end
 
-set -g __done_version 1.16.5
+set -g __done_version 1.17.0
 
 function __done_run_powershell_script
     set -l powershell_exe (command --search "powershell.exe")
@@ -196,7 +196,7 @@ end
 if set -q __done_enabled
     set -g __done_initial_window_id ''
     set -q __done_min_cmd_duration; or set -g __done_min_cmd_duration 5000
-    set -q __done_exclude; or set -g __done_exclude 'git (?!push|pull|fetch)'
+    set -q __done_exclude; or set -g __done_exclude '^git (?!push|pull|fetch)'
     set -q __done_notify_sound; or set -g __done_notify_sound 0
     set -q __done_sway_ignore_visible; or set -g __done_sway_ignore_visible 0
     set -q __done_tmux_pane_format; or set -g __done_tmux_pane_format '[#{window_index}]'
@@ -214,7 +214,13 @@ if set -q __done_enabled
         if test $cmd_duration
             and test $cmd_duration -gt $__done_min_cmd_duration # longer than notify_duration
             and not __done_is_process_window_focused # process pane or window not focused
-            and not string match -qr $__done_exclude $argv[1] # don't notify on git commands which might wait external editor
+
+            # don't notify if command matches exclude list
+            for pattern in $__done_exclude
+                if string match -qr $pattern $argv[1]
+                    return
+                end
+            end
 
             # Store duration of last command
             set -l humanized_duration (__done_humanize_duration "$cmd_duration")
@@ -248,6 +254,11 @@ if set -q __done_enabled
                 end
 
             else if type -q osascript # AppleScript
+                # escape double quotes that might exist in the message and break osascript. fixes #133
+                set -l message (string replace --all '"' '\"' "$message")
+                set -l title (string replace --all '"' '\"' "$title")
+
+                osascript -e "display notification \"$message\" with title \"$title\""
                 if test "$__done_notify_sound" -eq 1
                     osascript -e "display notification \"$message\" with title \"$title\" sound name \"Glass\""
                 else
