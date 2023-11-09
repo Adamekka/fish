@@ -55,8 +55,14 @@ end
 # Rust wrapper
 set -x RUSTC_WRAPPER sccache
 
-# For Gradle
-set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
+# Java and Android
+if test (uname) = Darwin
+    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+    set -x ANDROID_HOME /opt/homebrew/share/android-sdk
+    set -x ANDROID_NDK_ROOT /opt/homebrew/share/android-ndk
+else
+    set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
+end
 
 # For SDKMAN
 if test -e ~/.sdkman/bin/sdkman-init.sh
