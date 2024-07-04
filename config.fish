@@ -74,6 +74,11 @@ if type -q godot
     alias godot4="godot"
 end
 
+# Swift beta
+if test -e "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift"
+    alias swift="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift"
+end
+
 # Set theme
 fish_config theme choose "Dracula Official"
 
