@@ -1,8 +1,16 @@
 function update
     # NixOS
     if test -f /etc/NIXOS
-        sudo nix-channel --update
-        sudo nixos-rebuild switch
+        if type -q nh
+            cd /etc/nixos
+            sudo nix flake update
+            nh os switch /etc/nixos
+            git status -s
+            cd -
+        else
+            sudo nix-channel --update
+            sudo nixos-rebuild switch
+        end
 
         # Fish config
         fish_update
@@ -14,7 +22,6 @@ function update
             git status -s
             cd -
         end
-
         return
     end
 
