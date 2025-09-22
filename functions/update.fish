@@ -2,11 +2,8 @@ function update
     # NixOS
     if test -f /etc/NIXOS
         if type -q nh
-            cd /etc/nixos
-            sudo nix flake update
-            nh os switch /etc/nixos
+            nh os switch /etc/nixos --update
             git status -s
-            cd -
         else
             sudo nix-channel --update
             sudo nixos-rebuild switch
@@ -18,9 +15,9 @@ function update
         # Fisher
         if type -q fisher
             fisher update
-            cd $fish_config
+            pushd $fish_config
             git status -s
-            cd -
+            popd -
         end
         return
     end
