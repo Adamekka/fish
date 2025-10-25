@@ -2,7 +2,7 @@ function update
     # NixOS
     if test -f /etc/NIXOS
         if type -q nh
-            nh os switch /etc/nixos --update
+            nh os switch --update --impure
             git status -s
         else
             sudo nix-channel --update
