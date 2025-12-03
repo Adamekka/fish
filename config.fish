@@ -64,11 +64,6 @@ else
     set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
 end
 
-# For SDKMAN
-if test -e ~/.sdkman/bin/sdkman-init.sh
-    bass source ~/.sdkman/bin/sdkman-init.sh
-end
-
 # Godot
 if type -q godot
     alias godot4="godot"
