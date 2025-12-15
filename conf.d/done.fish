@@ -24,7 +24,7 @@ if not status is-interactive
     exit
 end
 
-set -g __done_version 1.20.2
+set -g __done_version 1.21.1
 
 function __done_run_powershell_script
     set -f powershell_exe (command --search "powershell.exe")
@@ -226,7 +226,7 @@ if set -q __done_enabled
         # backwards compatibility for fish < v3.0
         set -q cmd_duration; or set -l cmd_duration $CMD_DURATION
 
-        if test "$cmd_duration"
+        if test -n "$cmd_duration"
             and test "$cmd_duration" -gt "$__done_min_cmd_duration" # longer than notify_duration
             and not __done_is_process_window_focused # process pane or window not focused
 
@@ -263,8 +263,11 @@ if set -q __done_enabled
                 printf "\x1b]99;i=done:d=0;$title\x1b\\"
                 printf "\x1b]99;i=done:d=1:p=body;$message\x1b\\"
 
-            else if test "$TERM_PROGRAM" = ghostty
+            else if test "$TERM_PROGRAM" = ghostty; or test "$TERM_PROGRAM" = WezTerm
                 printf "\x1b]777;notify;%s;%s\x1b\\" "$title" "$message"
+
+            else if test "$TERM_PROGRAM" = iTerm.app
+                printf "\x1b]9;%s: %s\x1b\\" "$title" "$message"
 
             else if type -q terminal-notifier # https://github.com/julienXX/terminal-notifier
                 if test "$__done_notify_sound" -eq 1
