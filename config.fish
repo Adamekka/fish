@@ -54,7 +54,7 @@ end
 
 # Java and Android
 if test (uname) = Darwin
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+    set -x JAVA_HOME (/usr/libexec/java_home)
     set -x ANDROID_HOME /opt/homebrew/share/android-sdk
     set -x ANDROID_NDK_ROOT /opt/homebrew/share/android-ndk
 end
