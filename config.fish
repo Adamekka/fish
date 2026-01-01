@@ -64,6 +64,8 @@ if type -q godot
     alias godot4="godot"
 end
 
+# .NET
+set -x DOTNET_ROOT "/opt/homebrew/opt/dotnet@8/libexec"
 
 # Set theme
 fish_config theme choose "Dracula Official"
