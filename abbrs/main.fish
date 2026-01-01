@@ -10,7 +10,10 @@ end
 abbr -a ka killall
 
 # swiftformat
-abbr -a sf "swiftformat **/*.swift"
+abbr -a sf 'swiftformat (string match -v ".build/*" **/*.swift)'
+
+# swiftlint
+abbr -a sl 'swiftlint (string match -v ".build/*" **/*.swift)'
 
 # autopep8
 abbr -a pyfmt "autopep8 -i -r **/*.py"
