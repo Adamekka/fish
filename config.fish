@@ -52,16 +52,11 @@ if test -e $__fish_config_dir/functions/private.fish
     source $__fish_config_dir/functions/private.fish
 end
 
-# Rust wrapper
-set -x RUSTC_WRAPPER sccache
-
 # Java and Android
 if test (uname) = Darwin
     set -x JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
     set -x ANDROID_HOME /opt/homebrew/share/android-sdk
     set -x ANDROID_NDK_ROOT /opt/homebrew/share/android-ndk
-else
-    set -x JAVA_HOME /usr/lib/jvm/jre-20-openjdk
 end
 
 # Godot
@@ -69,10 +64,6 @@ if type -q godot
     alias godot4="godot"
 end
 
-# Swift beta
-if test -e "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift"
-    alias swift="/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift"
-end
 
 # Set theme
 fish_config theme choose "Dracula Official"
