@@ -21,4 +21,4 @@ end
 #################
 
 # Helix
-alias h="helix"
+alias h="hx"
