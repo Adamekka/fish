@@ -46,7 +46,14 @@ function update
     # macOS
     if type -q brew
         brew update
-        brew upgrade
+        brew outdated --greedy
+
+        read -P "Do you want to upgrade all brew packages? [Y/n] " reply
+
+        switch (string lower $reply)
+            case "" y yes
+                brew upgrade --greedy
+        end
     end
 
     # Nix
