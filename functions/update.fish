@@ -8,18 +8,16 @@ function update
             sudo nix-channel --update
             sudo nixos-rebuild switch
         end
+    else if type -q nix
+        nix-channel --update
+        nix-env -u
+    end
 
-        # Fish config
-        fish_update
-
-        # Fisher
-        if type -q fisher
-            fisher update
-            pushd $fish_config
-            git status -s
-            popd -
-        end
-        return
+    # Arch
+    if type -q yay
+        sudo yay -Syu
+    else if type -q pacman
+        sudo pacman -Syu
     end
 
     # Debian/Ubuntu
@@ -33,16 +31,16 @@ function update
         end
     end
 
-    # Arch
-    if type -q yay
-        sudo yay -Syu
-    else if type -q pacman
-        sudo pacman -Syu
-    end
-
     # Fedora
     if type -q dnf
         sudo dnf update
+    end
+
+    # Flatpak
+    if type -q flatpak
+        sudo flatpak update -y
+        sudo flatpak remove --unused -y
+        sudo flatpak repair
     end
 
     # macOS
@@ -51,16 +49,8 @@ function update
         brew upgrade
     end
 
-    # Windows
-    if type -q scoop
-        scoop update
-        scoop upgrade
-    end
-
     # Nix
     if type -q nix
-        nix-channel --update
-        nix-env -u
     end
 
     # Rust
@@ -79,40 +69,15 @@ function update
         end
     end
 
-    # Flatpak
-    if type -q flatpak
-        sudo flatpak update -y
-        sudo flatpak remove --unused -y
-        sudo flatpak repair
-    end
-
     # Snap
     if type -q snap
         sudo snap refresh
     end
 
-    # Python packages
-    if type -q pip
-        pip install --upgrade pip
-        pip list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1 | xargs -n1 pip install -U
-    else if type -q pip3
-        pip3 install --upgrade pip
-        pip3 list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1 | xargs -n1 pip3 install -U
-    end
-
-    # Node.js packages
-    if type -q npm
-        npm update -g
-    end
-
-    # Yarn packages
-    if type -q yarn
-        yarn global upgrade
-    end
-
-    # Ruby gems
-    if type -q gem
-        gem update
+    # Windows
+    if type -q scoop
+        scoop update
+        scoop upgrade
     end
 
     # Fish config
