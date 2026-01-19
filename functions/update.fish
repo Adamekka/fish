@@ -40,7 +40,6 @@ function update
     if type -q flatpak
         sudo flatpak update -y
         sudo flatpak remove --unused -y
-        sudo flatpak repair
     end
 
     # macOS
