@@ -11,14 +11,14 @@ set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
 # Editor
-if type -q nvim
+if type -q hx
+    set -x EDITOR hx
+else if type -q nvim
     set -x EDITOR nvim
 else if type -q vim
     set -x EDITOR vim
 else if type -q vi
     set -x EDITOR vi
-else if type -q helix
-    set -x EDITOR helix
 end
 
 set -x GIT_EDITOR $EDITOR
