@@ -1,18 +1,6 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
 add_newline = true
-
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[➜](bold red)"
-
-[directory]
-read_only = " "
-truncation_length = 5
-format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [username]
 style_user = "bold blue"
@@ -22,72 +10,128 @@ show_always = true
 [hostname]
 ssh_only = false
 format = "[$hostname]($style)\n"
-# trim_at = "-"
 style = "bold dimmed blue"
 disabled = false
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
-# Programming langs
-
 [aws]
-symbol = "  "
+symbol = "  "
 
-[conda]
-symbol = " "
+[azure]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[cmake]
+symbol = " "
+
+[container]
+symbol = " "
+
+[cpp]
+symbol = " "
 
 [dart]
-symbol = " "
+symbol = " "
+
+[deno]
+symbol = " "
+
+[directory]
+read_only = "󰌾 "
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[docker_context]
+symbol = " "
+
+[dotnet]
+symbol = ".NET "
 
 [elixir]
-symbol = " "
+symbol = " "
 
 [elm]
 symbol = " "
 
-# [git_branch]
-# symbol = " "
+[erlang]
+symbol = " "
+
+[gcloud]
+symbol = "󱇶 "
+
+[git_branch]
+symbol = " "
 
 [golang]
-symbol = " "
+symbol = "󰟓 "
 
-[hg_branch]
-symbol = " "
+[gradle]
+symbol = " "
+
+[haskell]
+symbol = " "
 
 [java]
-symbol = " "
+symbol = " "
 
 [julia]
-symbol = " "
+symbol = " "
 
-[memory_usage]
-symbol = " "
+[kotlin]
+symbol = " "
+
+[kubernetes]
+symbol = " "
+
+[lua]
+symbol = " "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = "󱄅 "
+
+[nodejs]
+format = "via [ Node.js $version](bold green) "
+detect_files = ["package.json", ".node-version"]
+detect_folders = ["node_modules"]
+
+[ocaml]
+symbol = " "
 
 [package]
-symbol = " "
+symbol = " "
 
 [perl]
-symbol = " "
+symbol = " "
 
 [php]
-symbol = " "
+symbol = " "
 
 [python]
 symbol = " "
-#pyenv_version_name = true
+pyenv_version_name = true
 format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
+
+[rlang]
+symbol = " "
 
 [ruby]
 symbol = " "
@@ -98,13 +142,11 @@ symbol = " "
 [scala]
 symbol = " "
 
-[shlvl]
-symbol = " "
-
 [swift]
-symbol = "ﯣ "
+symbol = " "
 
-[nodejs]
-format = "via [ Node.js $version](bold green) "
-detect_files = ["package.json", ".node-version"]
-detect_folders = ["node_modules"]
+[typst]
+symbol = "t "
+
+[zig]
+symbol = " "
