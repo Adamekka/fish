@@ -31,6 +31,12 @@ function update
         sudo pacman -Syu
     end
 
+    # Bun programs
+    if type -q bun
+        print_package_manager Bun
+        bun update -g --latest
+    end
+
     # Debian
     if test (uname) != Darwin
         if type -q nala
