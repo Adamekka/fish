@@ -3,7 +3,7 @@ if type -q eza
 else if type -q exa
     set ls_ exa
 else
-    set -g ls_ ls
+    set ls_ ls
 end
 
 alias l="$ls_ -F --icons --group-directories-first"

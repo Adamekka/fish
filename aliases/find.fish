@@ -1,0 +1,1 @@
+alias f="find . | rg"
