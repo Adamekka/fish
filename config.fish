@@ -1,30 +1,17 @@
-# Set distro global variable
-if type -q lsb_release # This checking is needed or Termux will go crazy
+# This checking is needed or Termux will go crazy
+if type -q lsb_release
     set -x DISTRO (lsb_release -si)
 else
     set -x DISTRO unknown
 end
 
-# pnpm
-set -gx PNPM_HOME "$HOME/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
-# pnpm end
-
-# Editor
-if type -q hx
-    set -x EDITOR hx
-else if type -q nvim
-    set -x EDITOR nvim
-else if type -q vim
-    set -x EDITOR vim
-else if type -q vi
-    set -x EDITOR vi
-end
-
-set -x GIT_EDITOR $EDITOR
-
 # Prevent directories names from being shortened
 set fish_prompt_pwd_dir_length 0
+
+# Source env vars
+for i in $__fish_config_dir/env_vars/*.fish
+    source $i
+end
 
 # Source aliases
 for i in $__fish_config_dir/aliases/*.fish
@@ -46,26 +33,6 @@ end
 if test -e $__fish_config_dir/functions/fish_update.fish
     source $__fish_config_dir/functions/fish_update.fish
 end
-
-# Source private stuff (scripts for this machine only in ./functions/private.fish)
-if test -e $__fish_config_dir/functions/private.fish
-    source $__fish_config_dir/functions/private.fish
-end
-
-# Java and Android
-if test (uname) = Darwin
-    set -x JAVA_HOME (/usr/libexec/java_home)
-    set -x ANDROID_HOME /opt/homebrew/share/android-sdk
-    set -x ANDROID_NDK_ROOT /opt/homebrew/share/android-ndk
-end
-
-# Godot
-if type -q godot
-    alias godot4="godot"
-end
-
-# .NET
-set -x DOTNET_ROOT "/opt/homebrew/opt/dotnet@8/libexec"
 
 # Set theme
 fish_config theme choose "Dracula Official"
