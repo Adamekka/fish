@@ -22,6 +22,12 @@ function update
         nix-env -u
     end
 
+    # Adblock
+    if type -q adblock
+        print_package_manager Adblock
+        adblock
+    end
+
     # Arch
     if type -q yay
         print_package_manager Arch
