@@ -73,14 +73,7 @@ function update
     if type -q brew
         print_package_manager Homebrew
         brew update
-        brew outdated --greedy
-
-        read -P "Do you want to upgrade all brew packages? [Y/n] " reply
-
-        switch (string lower $reply)
-            case "" y yes
-                brew upgrade --greedy
-        end
+        brew upgrade --greedy
     end
 
     # OpenCode extension manager
