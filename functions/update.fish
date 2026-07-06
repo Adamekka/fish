@@ -76,12 +76,6 @@ function update
         brew upgrade --greedy
     end
 
-    # OpenCode extension manager
-    if type -q ocx
-        print_package_manager "OpenCode extension manager"
-        ocx update -g --all
-    end
-
     # Rust
     if type -q rustup
         print_package_manager Rust
