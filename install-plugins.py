@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os
+import subprocess
 
 plugins_file = open("fish_plugins", "r")
 plugins = plugins_file.readlines()
@@ -10,4 +10,4 @@ plugins = [plugin.strip() for plugin in plugins]
 
 for plugin in plugins:
     print("Installing: " + plugin)
-    os.system("fish -c 'fisher install " + plugin + "'")
+    subprocess.run(["fish", "-c", "fisher install " + plugin])
